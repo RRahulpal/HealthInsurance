@@ -1,0 +1,128 @@
+﻿@page
+@model HealthInsuranceWeb.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="hero">
+    <div class="container hero-grid">
+        <div class="hero-text">
+            <span class="badge">Trusted by 50,000+ Families</span>
+            <h1>Protect Your Family With Smart Health Insurance</h1>
+            <p>
+                Get affordable medical coverage, cashless hospitalization, annual health checkups,
+                and stress-free claims support with HealthSecure.
+            </p>
+
+            <div class="hero-actions">
+                <a asp-page="/Quote" class="btn btn-primary">Get Free Quote</a>
+                <a asp-page="/Plans" class="btn btn-outline">View Plans</a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat-card">
+                    <h3>5000+</h3>
+                    <p>Network Hospitals</p>
+                </div>
+                <div class="stat-card">
+                    <h3>98%</h3>
+                    <p>Claim Support Rate</p>
+                </div>
+                <div class="stat-card">
+                    <h3>24x7</h3>
+                    <p>Customer Assistance</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-card glass-card">
+            <h2>Quick Policy Highlights</h2>
+            <ul class="feature-list">
+                <li>Cashless treatment facility</li>
+                <li>Pre and post hospitalization cover</li>
+                <li>Tax benefits under applicable law</li>
+                <li>Family floater plans available</li>
+                <li>Senior citizen special plans</li>
+            </ul>
+            <a asp-page="/Quote" class="btn btn-light full-width">Check Eligibility</a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Why Choose HealthSecure?</h2>
+            <p>Simple plans, quick service, and support when you need it most.</p>
+        </div>
+
+        <div class="card-grid">
+            <div class="info-card">
+                <div class="icon-circle">🩺</div>
+                <h3>Comprehensive Coverage</h3>
+                <p>Hospitalization, daycare procedures, ambulance, and more.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-circle">💳</div>
+                <h3>Cashless Claims</h3>
+                <p>Get treatment at network hospitals without worrying about upfront payments.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-circle">👨‍👩‍👧</div>
+                <h3>Family Protection</h3>
+                <p>Flexible family floater policies with affordable premiums.</p>
+            </div>
+
+            <div class="info-card">
+                <div class="icon-circle">⏱</div>
+                <h3>Fast Assistance</h3>
+                <p>Dedicated support team for policy help, renewals, and claim guidance.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section alt-bg">
+    <div class="container">
+        <div class="section-title">
+            <h2>Popular Insurance Plans</h2>
+            <p>Designed for every stage of life.</p>
+        </div>
+
+        <div class="plans-preview">
+            <div class="plan-card">
+                <h3>Individual Care</h3>
+                <p>Best for working professionals and young adults.</p>
+                <h4>₹5L - ₹15L Cover</h4>
+                <a asp-page="/Plans" class="link-btn">Learn More</a>
+            </div>
+
+            <div class="plan-card featured">
+                <span class="featured-tag">Most Popular</span>
+                <h3>Family Shield</h3>
+                <p>One plan for spouse, children, and parents.</p>
+                <h4>₹10L - ₹25L Cover</h4>
+                <a asp-page="/Plans" class="link-btn">Learn More</a>
+            </div>
+
+            <div class="plan-card">
+                <h3>Senior Secure</h3>
+                <p>Health protection for senior citizens with extra support.</p>
+                <h4>₹3L - ₹10L Cover</h4>
+                <a asp-page="/Plans" class="link-btn">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section cta-section">
+    <div class="container cta-box">
+        <div>
+            <h2>Need the best health insurance plan?</h2>
+            <p>Get a personalized quote in less than 2 minutes.</p>
+        </div>
+        <a asp-page="/Quote" class="btn btn-primary">Get Started</a>
+    </div>
+</section>

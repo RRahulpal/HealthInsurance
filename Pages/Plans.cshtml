@@ -1,0 +1,55 @@
+﻿@page
+@model HealthInsuranceWeb.Pages.PlansModel
+@{
+    ViewData["Title"] = "Plans";
+}
+
+<section class="page-banner">
+    <div class="container">
+        <h1>Our Health Insurance Plans</h1>
+        <p>Choose a plan that fits your health and budget needs.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="card-grid">
+            <div class="plan-card plan-page-card">
+                <h3>Individual Care</h3>
+                <p>Ideal for single adults and professionals.</p>
+                <ul class="feature-list dark-list">
+                    <li>Hospitalization cover</li>
+                    <li>Cashless treatment</li>
+                    <li>Daycare procedures</li>
+                    <li>Annual health checkup</li>
+                </ul>
+                <a asp-page="/Quote" class="btn btn-primary full-width">Apply Now</a>
+            </div>
+
+            <div class="plan-card plan-page-card featured">
+                <span class="featured-tag">Best Seller</span>
+                <h3>Family Shield</h3>
+                <p>Protect your full family under one policy.</p>
+                <ul class="feature-list dark-list">
+                    <li>Family floater option</li>
+                    <li>Maternity add-on</li>
+                    <li>Children coverage</li>
+                    <li>High sum insured</li>
+                </ul>
+                <a asp-page="/Quote" class="btn btn-primary full-width">Apply Now</a>
+            </div>
+
+            <div class="plan-card plan-page-card">
+                <h3>Senior Secure</h3>
+                <p>Specially designed for senior citizens.</p>
+                <ul class="feature-list dark-list">
+                    <li>Pre-existing disease support</li>
+                    <li>Specialized claim help</li>
+                    <li>Affordable premium options</li>
+                    <li>Regular medical benefits</li>
+                </ul>
+                <a asp-page="/Quote" class="btn btn-primary full-width">Apply Now</a>
+            </div>
+        </div>
+    </div>
+</section>

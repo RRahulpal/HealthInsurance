@@ -1,0 +1,74 @@
+﻿@page
+@model HealthInsuranceWeb.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<section class="page-banner">
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We are here to help with your policy, claims, and plan queries.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container quote-layout">
+        <div class="quote-info">
+            <div class="info-card small-card">
+                <h3>Call Us</h3>
+                <p>+91 98765 43210</p>
+            </div>
+            <div class="info-card small-card">
+                <h3>Email Us</h3>
+                <p>support@healthsecure.com</p>
+            </div>
+            <div class="info-card small-card">
+                <h3>Office</h3>
+                <p>Mumbai, India</p>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <h2>Send Message</h2>
+
+            @if (!string.IsNullOrEmpty(Model.Message))
+            {
+                <div class="success-box">@Model.Message</div>
+            }
+
+            <form method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger validation-summary"></div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Name"></label>
+                    <input asp-for="Input.Name" class="form-control" />
+                    <span asp-validation-for="Input.Name" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.Subject"></label>
+                    <input asp-for="Input.Subject" class="form-control" />
+                    <span asp-validation-for="Input.Subject" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Input.MessageText"></label>
+                    <textarea asp-for="Input.MessageText" class="form-control" rows="5"></textarea>
+                    <span asp-validation-for="Input.MessageText" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary full-width">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

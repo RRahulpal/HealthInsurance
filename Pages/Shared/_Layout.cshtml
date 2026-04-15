@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - HealthSecure</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+    <header class="main-header">
+        <div class="container nav-container">
+            <a asp-page="/Index" class="logo">
+                <span class="logo-icon">❤</span>
+                <span>HealthSecure</span>
+            </a>
+
+            <nav class="nav-menu">
+                <a asp-page="/Index">Home</a>
+                <a asp-page="/Plans">Plans</a>
+                <a asp-page="/Quote">Get Quote</a>
+                <a asp-page="/Claims">Claims</a>
+                <a asp-page="/Contact">Contact</a>
+            </nav>
+
+            <a asp-page="/Quote" class="btn btn-primary">Buy Now</a>
+        </div>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <h3>HealthSecure</h3>
+                <p>
+                    Affordable and reliable health insurance for individuals, families,
+                    and senior citizens.
+                </p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a asp-page="/Index">Home</a></li>
+                    <li><a asp-page="/Plans">Plans</a></li>
+                    <li><a asp-page="/Quote">Get Quote</a></li>
+                    <li><a asp-page="/Claims">Claims</a></li>
+                    <li><a asp-page="/Contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p>Email: support@healthsecure.com</p>
+                <p>Phone: +91 98765 43210</p>
+                <p>24x7 Claim Support Available</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            © @DateTime.Now.Year HealthSecure. All rights reserved.
+        </div>
+    </footer>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
