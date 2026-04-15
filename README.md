@@ -35,6 +35,19 @@ dotnet ef database update
 
 5. Run the project
 
+
+Database chnages on 15th April 2026
+CREATE TABLE QuoteRequests
+(
+    Id INT PRIMARY KEY IDENTITY,
+    FullName NVARCHAR(100) NOT NULL,
+    Age INT NOT NULL,
+    City NVARCHAR(50) NOT NULL,
+    Mobile NVARCHAR(20) NOT NULL,
+    Email NVARCHAR(100) NOT NULL,
+    PlanType NVARCHAR(50) NOT NULL,
+    CreatedAt DATETIME NOT NULL DEFAULT GETDATE()
+);
 ## 👨‍💻 Author
 
 Rahul Pal
