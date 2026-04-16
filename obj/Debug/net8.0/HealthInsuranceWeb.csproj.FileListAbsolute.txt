@@ -144,3 +144,4 @@ C:\Users\User\source\repos\RazorProject\RazorProject\obj\Debug\net8.0\refint\Hea
 C:\Users\User\source\repos\RazorProject\RazorProject\obj\Debug\net8.0\HealthInsuranceWeb.pdb
 C:\Users\User\source\repos\RazorProject\RazorProject\obj\Debug\net8.0\HealthInsuranceWeb.genruntimeconfig.cache
 C:\Users\User\source\repos\RazorProject\RazorProject\obj\Debug\net8.0\ref\HealthInsuranceWeb.dll
+C:\Users\User\source\repos\RazorProject\RazorProject\obj\Debug\net8.0\HealthInsuranceWeb.sourcelink.json
