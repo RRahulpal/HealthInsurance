@@ -1,0 +1,67 @@
+﻿@page
+@model HealthInsuranceWeb.Pages.TestQuotesModel
+@{
+    ViewData["Title"] = "Saved Quotes";
+}
+
+<section class="page-banner">
+    <div class="container">
+        <h1>Saved Quote Requests</h1>
+        <p>View all submitted health insurance quote requests in one place.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <div class="section-title">
+            <h2>Customer Quote Requests</h2>
+            <p>All submitted records from the quote form.</p>
+        </div>
+
+        <div class="quotes-table-card">
+            <div class="quotes-table-header">
+                <h3>Submitted Requests</h3>
+                <span class="quotes-badge">Total: @Model.Quotes.Count</span>
+            </div>
+
+            <div class="quotes-table-wrapper">
+                <table class="quotes-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>City</th>
+                            <th>Email</th>
+                            <th>Mobile</th>
+                            <th>Plan</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @if (Model.Quotes != null && Model.Quotes.Any())
+                        {
+                            @foreach (var q in Model.Quotes)
+                            {
+                                <tr>
+                                    <td>@q.FullName</td>
+                                    <td>@q.Age</td>
+                                    <td>@q.City</td>
+                                    <td>@q.Email</td>
+                                    <td>@q.Mobile</td>
+                                    <td>
+                                        <span class="plan-pill">@q.PlanType</span>
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="6" class="empty-row">No quote requests found.</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
