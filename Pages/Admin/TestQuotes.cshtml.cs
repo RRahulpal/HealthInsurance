@@ -1,11 +1,13 @@
 using HealthInsuranceWeb.Data;
 using HealthInsuranceWeb.Model;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
-namespace HealthInsuranceWeb.Pages
+namespace HealthInsuranceWeb.Pages.Admin
 {
+    [Authorize(Roles = "Admin")]
     public class TestQuotesModel : PageModel
     {
         private readonly ApplicationDbContext _context;
