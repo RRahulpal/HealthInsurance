@@ -13,8 +13,11 @@
                 <span class="logo-icon">❤</span>
                 <span>HealthSecure</span>
             </a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" type="button">
+                ☰
+            </button>
 
-            <nav class="nav-menu">
+            <nav class="nav-menu" id="mobileMenu">
                 <a asp-page="/Index">Home</a>
                 <a asp-page="/Plans">Plans</a>
                 <a asp-page="/Quote">Get Quote</a>
@@ -54,7 +57,7 @@
 
             <div>
                 <h4>Contact</h4>
-                <p>Email: support@healthsecure.com</p>
+                <p>Email: Ankita@healthsecure.com</p>
                 <p>Phone: +91 98765 43210</p>
                 <p>24x7 Claim Support Available</p>
             </div>
@@ -64,7 +67,14 @@
             © @DateTime.Now.Year HealthSecure. All rights reserved.
         </div>
     </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
 
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

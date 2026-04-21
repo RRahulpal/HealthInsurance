@@ -545,6 +545,18 @@ a {
     color: #64748b;
     padding: 28px !important;
 }
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+.desktop-only {
+    display: inline-block;
+}
 
 @media (max-width: 768px) {
     .quotes-table-card {
@@ -572,9 +584,48 @@ a {
         grid-template-columns: 1fr;
     }
 
-    .nav-menu {
+    .nav-container {
+        position: relative;
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+    /* Force toggle to right */
+    .menu-toggle {
+        display: block;
+        margin-left: auto; /* ?? THIS FIXES IT */
+    }
+
+    .desktop-only {
         display: none;
     }
+
+    .nav-menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 0;
+        background: #0f172a;
+        margin-top: 15px;
+        border-radius: 14px;
+        overflow: hidden;
+    }
+
+        .nav-menu.show {
+            display: flex;
+        }
+
+        .nav-menu a {
+            padding: 14px 18px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            color: #fff;
+        }
+
+            .nav-menu a:last-child {
+                border-bottom: none;
+            }
 
     .hero-text h1 {
         font-size: 2.3rem;
