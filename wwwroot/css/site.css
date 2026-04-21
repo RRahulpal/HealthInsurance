@@ -592,12 +592,7 @@ a {
     .menu-toggle {
         display: block;
     }
-    /* Force toggle to right */
-    .menu-toggle {
-        display: block;
-        margin-left: auto; /* ?? THIS FIXES IT */
-    }
-
+  
     .desktop-only {
         display: none;
     }
